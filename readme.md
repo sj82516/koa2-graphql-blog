@@ -1,3 +1,5 @@
+![](https://circleci.com/gh/sj82516/koa2-graphql-blog.svg?style=shield&circle-token=44a20b01a0dce27c045aefa9d01c3e27507bf8a9)
+
 練習Koa2 + GraphQL，並整合CI/CD的流程
 
 ### 執行
