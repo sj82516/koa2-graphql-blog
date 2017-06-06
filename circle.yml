@@ -11,6 +11,7 @@ dependencies:
 test:
   pre:
     - source ./config/test_config.sh
+    - printenv
   override:
     - nvm use 7.9 && npm test
 
