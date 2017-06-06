@@ -21,19 +21,16 @@ describe("Test GraphQL", ()=> {
             const {data} = result;
             expect(data.createAuthor.id).to.be.above(0);
         });
-        it("should update author", async(done)=> {
-
-        });
-        it("should delete author", async(done)=> {
-
-        });
-
-        it("should retrievePostList belongs to the author", (done)=> {
-
-        });
+        // it("should update author", async(done)=> {
+        //
+        // });
+        // it("should delete author", async(done)=> {
+        //
+        // });
+        //
+        // it("should retrievePostList belongs to the author", (done)=> {
+        //
+        // });
     });
 
-    after(()=> {
-
-    });
 });

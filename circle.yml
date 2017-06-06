@@ -1,0 +1,14 @@
+machine:
+  timezone: Asia/Taipei
+  services:
+    - mysql
+
+dependencies:
+  override:
+    - curl -sL https://deb.nodesource.com/setup_7.x | bash -
+    - apt-get install -y nodejs
+
+test:
+  pre:
+    - source ./config/test_config.sh
+
