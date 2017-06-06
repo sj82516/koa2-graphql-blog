@@ -6,10 +6,10 @@ machine:
 dependencies:
   pre:
     - sudo apt-get update
-    - sudo curl -sL https://deb.nodesource.com/setup_7.x | bash -
-    - sudo apt-get install -y nodejs
+    - nvm install 7.9 && npm install
 
 test:
   pre:
     - source ./config/test_config.sh
+    - nvm use 7.9
 
