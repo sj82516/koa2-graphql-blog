@@ -11,5 +11,7 @@ dependencies:
 test:
   override:
     - ./config/test_config.sh;nvm use 7.9 && npm test
+  post:
+    - bash <(curl -s https://codecov.io/bash)
 
 
