@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for koa2-graphql-blog/model.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">koa2-graphql-blog/</a> model.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">38.24% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>13/34</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">25% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>2/8</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">21.43% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>3/14</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">38.24% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>13/34</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import connection from './connection';
+import logger from './logger';
+&nbsp;
+// Post宣告
+class ModelPostClass {
+    constructor() {
+        logger.info("create post table");
+        connection.execute(`CREATE TABLE IF NOT EXISTS Post(
+            id INT(10) AUTO_INCREMENT PRIMARY KEY,
+            author_id INT(10) NOT NULL,
+            title VARCHAR(255) NOT NULL,
+            content VARCHAR(255) NOT NULL,
+            create_at TIMESTAMP,
+            FOREIGN KEY (author_id) REFERENCES Author(id) 
+        );`)
+    }
+&nbsp;
+    createPost(<span class="fstat-no" title="function not covered" >authorId, title, content) {</span>
+        return <span class="cstat-no" title="statement not covered" >connection.execute(`INSERT INTO Post (author_id, title, content, create_at) </span>
+            values (?,?,?,?)`, [authorId, title, content || '', new Date()]);
+    }
+&nbsp;
+    retrievePost(<span class="fstat-no" title="function not covered" >query) {</span>
+        return <span class="cstat-no" title="statement not covered" >connection.execute(`SELECT * FROM Post ` + whereQuery(query));</span>
+    }
+&nbsp;
+    updatePost(<span class="fstat-no" title="function not covered" >id, query) {</span>
+        return <span class="cstat-no" title="statement not covered" >connection.execute(`UPDATE Post SET ` + updateQuery(query) + ' where id=?', [id]);</span>
+    }
+&nbsp;
+    deletePost(<span class="fstat-no" title="function not covered" >query) {</span>
+        return <span class="cstat-no" title="statement not covered" >connection.execute(`DELETE from Post ` + whereQuery(query));</span>
+    }
+    // 取得該篇文章的作者，只要透過authorID，不需加其他的條件
+    retrieveAuthor(<span class="fstat-no" title="function not covered" >authorId) {</span>
+        return <span class="cstat-no" title="statement not covered" >connection.execute(`SELECT * FROM Author where id=?`, [authorId]);</span>
+    }
+}
+&nbsp;
+// Author宣告
+class ModelAuthorClass {
+    constructor() {
+        logger.info("create author table");
+        connection.execute(`CREATE TABLE IF NOT EXISTS Author(
+            id INT(10) AUTO_INCREMENT PRIMARY KEY,
+            name VARCHAR(255) NOT NULL,
+            gender BOOLEAN NOT NULL,
+            age VARCHAR(255) NOT NULL,
+            email VARCHAR(50) NOT NULL,
+            intro VARCHAR(255),
+            create_at TIMESTAMP
+        );`)
+    }
+&nbsp;
+    createAuthor(name, gender, age, email, intro) {
+        // 預設回傳 {insertId} 但是GraphQL只認id，所以要轉換在回傳
+        return connection.execute(`INSERT INTO Author (name, gender, age, email, intro, create_at) 
+            values (?,?,?,?,?,?)`, [name, gender, age, email, intro || '', new Date()]).then(result=&gt;{
+            return <span class="cstat-no" title="statement not covered" >{id: result.insertId}</span>
+        });
+    }
+&nbsp;
+    retrieveAuthor(<span class="fstat-no" title="function not covered" >query) {</span>
+        return <span class="cstat-no" title="statement not covered" >connection.execute(`SELECT * FROM Author ` + whereQuery(query));</span>
+    }
+&nbsp;
+    updateAuthor(<span class="fstat-no" title="function not covered" >id,query) {</span>
+        return <span class="cstat-no" title="statement not covered" >connection.execute(`UPDATE Author SET ` + updateQuery(query) + ' where id=?', [id]);</span>
+    }
+&nbsp;
+    deleteAuthor(<span class="fstat-no" title="function not covered" >query) {</span>
+        return <span class="cstat-no" title="statement not covered" >connection.execute(`DELETE from Post ` + whereQuery(query));</span>
+    }
+&nbsp;
+    retrievePostList(<span class="fstat-no" title="function not covered" >id) {</span>
+        return <span class="cstat-no" title="statement not covered" >connection.execute(`SELECT * FROM Post where author_id=?`, [id])</span>
+    }
+}
+&nbsp;
+// 回傳更新的條件
+// 傳入 {name:"hello", age:5} 轉成 `name="hello", age=5`
+<span class="fstat-no" title="function not covered" >function updateQuery(query){</span>
+    "use strict";
+    let <span class="cstat-no" title="statement not covered" >updateString = '';</span>
+    for(<span class="cstat-no" title="statement not covered" >let prop in query){</span>
+        updateString = <span class="cstat-no" title="statement not covered" >updateString + "," + prop + "=" +  query[prop]</span>
+    }
+    return <span class="cstat-no" title="statement not covered" >updateString;</span>
+}
+&nbsp;
+// where條件式
+<span class="fstat-no" title="function not covered" >function whereQuery(query) {</span>
+    let <span class="cstat-no" title="statement not covered" >whereString = '';</span>
+&nbsp;
+    if(<span class="cstat-no" title="statement not covered" >Object.keys(query).length &gt; 0){</span>
+        for(<span class="cstat-no" title="statement not covered" >let prop in query){</span>
+            whereString = <span class="cstat-no" title="statement not covered" >whereString.length &gt; 0 ? whereString + " and ": "";</span>
+            whereString = <span class="cstat-no" title="statement not covered" >whereString + prop + "=" +  query[prop];</span>
+        }
+        whereString = <span class="cstat-no" title="statement not covered" >" where " + whereString;</span>
+    }
+&nbsp;
+    return <span class="cstat-no" title="statement not covered" >whereString;</span>
+}
+&nbsp;
+const ModelAuthor = new ModelAuthorClass();
+const ModelPost = new ModelPostClass();
+export {
+    ModelAuthor,
+    ModelPost
+}</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Jun 07 2017 18:25:19 GMT+0800 (CST)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>
