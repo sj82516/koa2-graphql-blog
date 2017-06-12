@@ -1,0 +1,17 @@
+FROM node:8.0.0-slim
+
+LABEL version=0.0.2
+
+LABEL maintainer "yuanchieh"
+
+RUN useradd -m yj
+
+WORKDIR /home/yj
+
+COPY . ./
+
+RUN yarn install
+
+EXPOSE 3000
+
+CMD ["/bin/bash","/home/yj/script/dev.sh"]

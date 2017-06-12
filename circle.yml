@@ -1,17 +1,41 @@
 machine:
   timezone: Asia/Taipei
+  environment:
+    PROJECT_NAME: koa-graphql-blog
+    CLUSTER_NAME: mysite-cluster
+    CLOUDSDK_COMPUTE_ZONE: asia-east1-b
+    ACCT_AUTH: ewogICJ0eXBlIjogInNlcnZpY2VfYWNjb3VudCIsCiAgInByb2plY3RfaWQiOiAia29hLWdyYXBocWwtYmxvZyIsCiAgInByaXZhdGVfa2V5X2lkIjogIjcwYWU5YjdhZDkxNzQ3ODEwNDYxYjVkMjBhOTJkMzBjOGQ3Y2Q4NjYiLAogICJwcml2YXRlX2tleSI6ICItLS0tLUJFR0lOIFBSSVZBVEUgS0VZLS0tLS1cbk1JSUV2UUlCQURBTkJna3Foa2lHOXcwQkFRRUZBQVNDQktjd2dnU2pBZ0VBQW9JQkFRREJ5Wm1CS1V1Z0RkMWlcbi8xTmIvWVVFNUhlNjRrSHdIZGp0YnJLNzBncTB6bjBrSE5BanI0eENYYmVpaVp6YUhGZEx4SnJaRDBwZS9LZm9cbm9lOHl0cTg1Zjd1LzUzU1lpQkJSMCtqTVZ0bXJIbFhwK0lkV3MvZDlGRzJ6T0ZQRllBMFpraGN1Y0M1d1FpUkRcblRhNkM4YTlQa3puSUFaalUxLzQzRzgycDlkZ1JzdnU3RXdRKy96NW9IYllwZTdieUpUZ3lsM0kwQ1VrUFFFNUhcbmFLR1d1NW1MWTVweTFFdkZieHZXakVtamlvdEdoU3FuUERaSmNlVTJqUW1jaDY4UzFCNDhueFloTGJWK1M1S0dcbkY0STNlcWQ5UHdmYm80Ti83MEs5V09tNkdKTUdjSXVxbHdSaEpDcVpNU1FuQlNEdWtOM1kvNkFRbEZYbmIwVGJcbjhRMitDdmw1QWdNQkFBRUNnZ0VBSVRGZ1h6ek5ETlhESVhWZGVHakUwNUUwcHVpaFpia2ZFcEEvQWlmWW1KNnpcbjFhOHZ3YVVNajhPUXRFRUJBbVVQV05XTXRuaEZnMTZnZmhyYXAyT2VRT21OcGJIR0NXaG83ek11Y1czQTYrd09cbnlEdy9KazArSzRrSHYwWjdKdGdzZGtCTlF6R0k2c2FSZ291NFJBcVV2anNZRHhlaTczWXR2NCsrR3dvV24vVXRcbmdZTURRMjhwWnR3U3k2SFU3WlNmdmZlVDdGQVZqYllzOUs2NEl6dllKWEhrNUlHbExHbVppbWtWcDhLK05ta2FcbnY3b2JobkliR1dBZC9WbFhEM1I5cnNyMVBERWVQSWM0eVgzRFJWNjlKTnFMQS9GMldBaWVPUU1tWUZrNE9mcjVcbnFUQk9ocXBiQllCSUV1SjNEb2lhd1dLVmpPSUxrYUwyZ1Nmb3U2emsyUUtCZ1FEcFdNUnNnYk9uQ3IzbG56dlJcbmNIR2prQkZJWjA5V1lwMXpiNkI0NFdPaDZ1TzFvU3FSUUYwd2JYMENGQXRXWWRtc3VNRGYrcGxrZlQ5OW9NeTBcbkVuek5QcE5aZHlyUER3cFIyYjhzRWZadGdoZEZLdXpGVUFyU3FleTdhQ0FXN0tlTFZ4bUFka0NNUm0zamRNTkxcbjhleVphRGlQakFCakoxdWJvWnlSQk9EdFpRS0JnUURVbWJCbDVsdVh4bFg3WmRPbWNOamszSTVhVk90QmdWaTdcbjdCanFtWFFJSjNXL3pBZDg5NXBkUVBvR0NJUGU4c0diL2lFakFhV2xhdmswYkdkSmtlckNxSlIvemhIWndHV1ZcbjV5TEMxVXlHUUVNa0l5YWtQd2t1dkdhWW9IUGU1bGZvTHQyb1B6UG1aQnhPTG90eTFVOTFwSjRWdzRwOE5HSDRcbmtJTlBFTGpVaFFLQmdRQ0R0RVI1Y2VOeWZzK2IwUG8wUmlEOXpvelNydXpLdHpKak96ZjV3azAzMEpuaHBDdWdcbmZCR2RDYzhxNHlGYkNqT1FGMTlWaTk0VUo5VTBGUlEwOXRKV0RlR2c5Mi9FR3BzYWc2b3hONW85U05YVmhsckpcbksxcFFlUFJTK254U05CU0V3dzV6d1VyQlllY1lJSWt5VGtQYWVrYWlUc1RSTWgrMGdjMGExUVFYT1FLQmdHenNcblJQVWdQYU1ZS2F0QXMxeGVDckhPMGx3emo4aWk1WHg2YlJXZEExYStLTlRZU3FuYkRjcGpaUFc4WFJ2WDBod0NcbjZxVk56YmxmZ2tnNmxmeWFkdVcraXo2anJIK2MxQzhtR2FncXNpZENPMlFEWW1QYUsvRTI4M1dWRjJpSEtWaTZcbjBqUEdGZWdmT0dWUjhYNG5EYXZmYUdNTUtTS1RqL0pTMEFPdE5KVWxBb0dBYXlGbVdSZTVCVm5DaVo3MWlyb3Rcbnd4U09wYU9hYUNhQ2JmQlNTLy9BaFJQY3labm4rZkd1U25BS01ueUlHWmNjN2piU2lCOGJYZzNmT3NpcWNncU9cbmZZclZSTVhTQkhZQTM4SGRxTm5ZRVcrUmFoa1BPTTlyUGVJL1BUWkFjSTQwQWY1b3RmRVZoRmt2SDVWZTBpL2Rcbm9tNHk2eGR3MFhlNzQ1WkFOMWxpams4PVxuLS0tLS1FTkQgUFJJVkFURSBLRVktLS0tLVxuIiwKICAiY2xpZW50X2VtYWlsIjogIjc0NDA5MjMyNDM2Mi1jb21wdXRlQGRldmVsb3Blci5nc2VydmljZWFjY291bnQuY29tIiwKICAiY2xpZW50X2lkIjogIjExNDE3NzcyMDg2ODU1MTEyNDYyOCIsCiAgImF1dGhfdXJpIjogImh0dHBzOi8vYWNjb3VudHMuZ29vZ2xlLmNvbS9vL29hdXRoMi9hdXRoIiwKICAidG9rZW5fdXJpIjogImh0dHBzOi8vYWNjb3VudHMuZ29vZ2xlLmNvbS9vL29hdXRoMi90b2tlbiIsCiAgImF1dGhfcHJvdmlkZXJfeDUwOV9jZXJ0X3VybCI6ICJodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9vYXV0aDIvdjEvY2VydHMiLAogICJjbGllbnRfeDUwOV9jZXJ0X3VybCI6ICJodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9yb2JvdC92MS9tZXRhZGF0YS94NTA5Lzc0NDA5MjMyNDM2Mi1jb21wdXRlJTQwZGV2ZWxvcGVyLmdzZXJ2aWNlYWNjb3VudC5jb20iCn0K
   services:
     - mysql
+    - docker
 
 dependencies:
   pre:
     - sudo apt-get update
-    - nvm install 7.9 && npm install
+      - nvm install 7.9 && npm install
+      - sudo /opt/google-cloud-sdk/bin/gcloud --quiet components update
+      - sudo /opt/google-cloud-sdk/bin/gcloud --quiet components update kubectl
+      - echo $ACCT_AUTH | base64 --decode -i > ${HOME}/account-auth.json
+      - sudo /opt/google-cloud-sdk/bin/gcloud auth activate-service-account --key-file ${HOME}/account-auth.json
+      - sudo /opt/google-cloud-sdk/bin/gcloud config set project $PROJECT_NAME
+      - sudo /opt/google-cloud-sdk/bin/gcloud --quiet config set container/cluster $CLUSTER_NAME
+      # Reading the zone from the env var is not working so we set it here
+      - sudo /opt/google-cloud-sdk/bin/gcloud config set compute/zone ${CLOUDSDK_COMPUTE_ZONE}
+      - sudo /opt/google-cloud-sdk/bin/gcloud --quiet container clusters get-credentials $CLUSTER_NAME
+      - docker build -t gcr.io/${PROJECT_NAME}/mysite:$CIRCLE_SHA1 .
+      # Using a separate tag command until Docker 1.10 is available on CircleCI, then we can use two tags in the build command above
+      - docker tag gcr.io/${PROJECT_NAME}/mysite:$CIRCLE_SHA1 gcr.io/${PROJECT_NAME}/mysite:latest
 
 test:
   override:
     - ./config/test_config.sh;nvm use 7.9 && npm test
   post:
     - bash <(curl -s https://codecov.io/bash)
+
+deployment:
+  dev:
+    branch: master
+    commands:
+      - ./deploy.sh
 
 
