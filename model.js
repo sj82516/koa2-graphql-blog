@@ -61,7 +61,7 @@ class ModelAuthorClass {
     }
 
     retrieveAuthor(query) {
-        return connection.execute(`SELECT * FROM Author ` + whereQuery(query));
+        return connection.execute(`SELECT * FROM Author ` +  whereQuery(query));
     }
 
     updateAuthor(id,query) {
