@@ -22,7 +22,8 @@ dependencies:
     # Reading the zone from the env var is not working so we set it here
     - sudo /opt/google-cloud-sdk/bin/gcloud config set compute/zone ${CLOUDSDK_COMPUTE_ZONE}
     - sudo /opt/google-cloud-sdk/bin/gcloud --quiet container clusters get-credentials $CLUSTER_NAME
-    - docker build -f ${HOME}/docker_file/dev -t gcr.io/${PROJECT_NAME}/mysite:$CIRCLE_SHA1 .
+    - ls
+    - docker build -f ./docker_file/dev -t gcr.io/${PROJECT_NAME}/mysite:$CIRCLE_SHA1 .
     # Using a separate tag command until Docker 1.10 is available on CircleCI, then we can use two tags in the build command above
     - docker tag gcr.io/${PROJECT_NAME}/mysite:$CIRCLE_SHA1 gcr.io/${PROJECT_NAME}/mysite:latest
 
