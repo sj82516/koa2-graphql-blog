@@ -16,3 +16,12 @@
 
 ### 測試
 > npm test
+
+### 檔案架構說明
+- config: 主要放DB的設定文件
+- coverage: 程式覆蓋率自動生成的文件，已放入.gitignore
+- docker_file: 就是Dockerfile
+- script: 在Dockerfile中的最後一步CMD預設啟動container的shell script
+- app.js: Nodejs主程式
+- deploy.sh: circleci在佈建階段所需的shell script
+- *.js: Nodejs其他相關的程序
